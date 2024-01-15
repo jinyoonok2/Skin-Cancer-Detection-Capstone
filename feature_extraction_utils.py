@@ -4,7 +4,7 @@ import yaml
 
 # Custom layers import
 from detr_custom_layers import *
-from custom_layers import *
+from _yolo_custom_layers import *
 
 from ultralytics.nn.tasks import attempt_load_one_weight
 from ultralytics.cfg import get_cfg

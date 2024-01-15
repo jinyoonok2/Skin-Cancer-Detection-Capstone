@@ -4,7 +4,8 @@ from collections import defaultdict
 
 def process_results(results):
     # Class names dictionary
-    names = {0: 'MEL', 1: 'MNV', 2: 'NV', 3: 'BCC', 4: 'AK', 5: 'BKL', 6: 'DF', 7: 'VASC', 8: 'SCC', 9: 'UNK'}
+    # names = {0: 'MEL', 1: 'MNV', 2: 'NV', 3: 'BCC', 4: 'AK', 5: 'BKL', 6: 'DF', 7: 'VASC', 8: 'SCC', 9: 'UNK'}
+    names = {0: 'MEL', 1: 'BCC', 2: 'AK', 3: 'DF', 4: 'VASC', 5: 'SCC', 6: 'BNG'}
 
     # Inverse mapping of names for quick lookup
     name_to_num = {v: k for k, v in names.items()}
