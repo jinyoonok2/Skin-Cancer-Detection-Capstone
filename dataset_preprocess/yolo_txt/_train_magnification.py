@@ -7,8 +7,8 @@ from dataset_path import *
 # }
 
 magnification_factors = {
-    'MEL': 4, 'MNV': 2, 'NV': 2, 'BCC': 4, 'AK': 16,
-    'BKL': 8, 'DF': 16, 'VASC': 8, 'SCC': 16, 'UNK': 1
+    'MEL': 4, 'MNV': 1, 'NV': 1, 'BCC': 2, 'AK': 16,
+    'BKL': 8, 'DF': 8, 'VASC': 4, 'SCC': 16
 }
 
 def duplicate_files(class_name, filename, file_type):
