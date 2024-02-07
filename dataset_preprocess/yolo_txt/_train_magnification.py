@@ -1,14 +1,19 @@
 import shutil
-from dataset_path import *
+from dataset_preprocess.yolo_txt.dataset_path import *
 
 # Define magnification factors for each class
 # magnification_factors = {
 #     'MEL': 8, 'BCC': 8, 'AK': 16, 'DF': 16, 'VASC': 16, 'SCC': 24, 'BNG': 1
 # }
 
+# magnification_factors = {
+#     'MEL': 4, 'MNV': 2, 'NV': 2, 'BCC': 4, 'AK': 16,
+#     'BKL': 8, 'DF': 16, 'VASC': 8, 'SCC': 16, 'UNK': 1
+# }
+
 magnification_factors = {
-    'MEL': 4, 'MNV': 1, 'NV': 1, 'BCC': 2, 'AK': 16,
-    'BKL': 8, 'DF': 8, 'VASC': 4, 'SCC': 16
+    'MEL': 4, 'MNV': 1, 'NV': 1, 'BCC': 2, 'AK': 64,
+    'BKL': 8, 'DF': 8, 'VASC': 2, 'SCC': 64
 }
 
 def duplicate_files(class_name, filename, file_type):

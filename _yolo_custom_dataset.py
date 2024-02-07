@@ -108,10 +108,11 @@ class CustomYOLODataset(YOLODataset):
 def v8_transforms_alter(dataset, imgsz, hyp, augment=False, stretch=False):
     """Convert images to a size suitable for YOLOv8 training."""
     pre_transform = Compose([
-        Mosaic(dataset, imgsz=imgsz, p=1.0 if augment else 0.2), # the one creates that a lot of boxes
+        Mosaic(dataset, imgsz=imgsz, p=1.0),
+        # Mosaic(dataset, imgsz=imgsz, p=1.0 if augment else 0.2), # the one creates that a lot of boxes
         # Mosaic(dataset, imgsz=imgsz, p=hyp.mosaic),
-        CopyPaste(p=0.3 if augment else 0.0),  # default is 0.0 in default.yaml /call: hyp.copy_paste
-        # CopyPaste(p=hyp.copy_paste),
+        # CopyPaste(p=0.3 if augment else 0.0),  # default is 0.0 in default.yaml /call: hyp.copy_paste
+        CopyPaste(p=hyp.copy_paste),
         RandomPerspective(
             degrees=45.0 if augment else 0.0,
             translate=hyp.translate,

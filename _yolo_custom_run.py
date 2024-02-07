@@ -19,17 +19,17 @@ def main():
     # model = YOLO('yolov8n.yaml').load('yolov8n.pt')  # build from YAML and transfer weights
     # model.train(data='datasets/HAM10000/data.yaml', epochs=3, imgsz=256)
 
-    # 1. custom trainer on combined
-    args = dict(model='yolov8s.pt', data=YAML_PATH, imgsz=256, epochs=100, device=0)
-
-    # 2. resume run*
-    # args = dict(model='runs/detect/train2/weights/last.pt', data=YAML_PATH, imgsz=256, epochs=100, device=0, resume=True)
-    trainer = CustomTrainer(overrides=args)
-    trainer.train()
+    # # 1. custom trainer on combined
+    # args = dict(model='yolov8s.pt', data=YAML_PATH, imgsz=256, epochs=100, device=0, name='train5-epoch150-nonUNK', patience=10, optimizer='Adam')
+    #
+    # # 2. resume run*
+    # # args = dict(model='runs/detect/train5-epoch150-nonUNK/weights/last.pt', data=YAML_PATH, imgsz=256, epochs=100, device=0, patience=10, optimizer='Adam', resume=True)
+    # trainer = CustomTrainer(overrides=args)
+    # trainer.train()
 
     # model test
-    # model = YOLO("runs/detect/train2/weights/best.pt")
-    # model.val(data='datasets\combined_dataset\data.yaml', plots=True)
+    model = YOLO("runs/detect/train6-epoch150-nonUNK/weights/best.pt")
+    model.val(data=r"C:\Jinyoon Projects\datasets\combined_dataset\data.yaml", plots=True, split='test')
 
 
 

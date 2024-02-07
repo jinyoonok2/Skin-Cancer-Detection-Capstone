@@ -9,4 +9,4 @@ import runpy
 runpy.run_path('_default_group_split.py')
 module_dict = runpy.run_path('_train_magnification.py')
 module_dict['main']()  # This will call the main function
-runpy.run_path('_check_empty.py')
+# runpy.run_path('_check_empty.py')
