@@ -14,7 +14,7 @@ COMB_TRAIN_PATH_IMAGES = os.path.join(COMB_TRAIN_PATH, "images")
 TEST_PATH_IMAGES = os.path.join(TEST_PATH, "images")
 
 COMB_TRAIN_PATH_LABELS = os.path.join(COMB_TRAIN_PATH, "labels")
-TEST_PATH_LABELS = os.path.join(TEST_PATH, "label")
+TEST_PATH_LABELS = os.path.join(TEST_PATH, "labels")
 
 COMB_TRAIN_PATH_MASKS = os.path.join(COMB_TRAIN_PATH, "masks")
 TEST_PATH_MASKS = os.path.join(TEST_PATH, "masks")

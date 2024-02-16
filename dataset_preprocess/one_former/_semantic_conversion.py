@@ -37,6 +37,6 @@ def process_labels(label_path, mask_path):
 
 if __name__ == '__main__':
     # Process label files for combined training and testing
-    process_labels(COMB_TRAIN_PATH_LABELS, COMB_TRAIN_PATH_MASKS)
+    # process_labels(COMB_TRAIN_PATH_LABELS, COMB_TRAIN_PATH_MASKS)
     process_labels(TEST_PATH_LABELS, TEST_PATH_MASKS)
 
