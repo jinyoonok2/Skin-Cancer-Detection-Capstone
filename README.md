@@ -1,3 +1,4 @@
+# Skin-Cancer-Detection-Capstone
 This is Skin lesion detection project.
 It utilizes various techniques and machine learning models to implement the Progressive Web Application(PWA) which detect skin lesion and classify the disease types.
 
