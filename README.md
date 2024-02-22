@@ -9,5 +9,5 @@ then
 ```markdown
 npm run
 ```
-Report of the current Progress document: https://pennstateoffice365-my.sharepoint.com/:w:/g/personal/juk481_psu_edu/ETgGZ_1t1o5Mk9qb9VduFCsBFiOUq9T3EegDk59liXDtmA
+Report of the current Progress document: https://pennstateoffice365-my.sharepoint.com/:w:/g/personal/juk481_psu_edu/ETgGZ_1t1o5Mk9qb9VduFCsBFiOUq9T3EegDk59liXDtmA  
 Web App Repository: https://github.com/jinyoonok2/SkinWebApp
