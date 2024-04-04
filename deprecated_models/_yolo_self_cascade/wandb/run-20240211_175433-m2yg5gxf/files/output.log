@@ -1,0 +1,629 @@
+Overriding model.yaml nc=80 with nc=2
+                   from  n    params  module                                       arguments
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]
+ 22        [15, 18, 21]  1   2116822  ultralytics.nn.modules.head.Detect           [2, [128, 256, 512]]
+Model summary: 225 layers, 11136374 parameters, 11136358 gradients, 28.6 GFLOPs
+Transferred 349/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [39m[22mrunning Automatic Mixed Precision (AMP) checks with YOLOv8n...
+[34m[1mAMP: [39m[22mchecks passed ✅
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[34m[1mtrain: [39m[22mScanning C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\labels... 76098 images, 0 backgrounds, 0 corrupt: 100%|██████████| 76098/76098 [01:31<00:00, 831.29it/s]
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0000204_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0001131_downsampled_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0001131_downsampled_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0001131_downsampled_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0001131_downsampled_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0010248_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0011161_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0011161_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0011161_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0011161_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014629_downsampled_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014793_downsampled_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0014966_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0015009_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0015211_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0015390_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024938_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0024970_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025173_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025206_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025231_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025584_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025584_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025641_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0025937_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026268_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026268_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026268_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026268_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_10.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_11.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_12.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_13.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_14.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_15.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_16.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_17.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_18.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_19.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_21.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_22.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_23.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_24.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_25.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_26.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_27.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_28.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_29.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_30.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_32.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0026327_SCC_9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027558_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027893_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0027945_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028010_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028746_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028746_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028746_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028746_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028882_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0028918_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_10.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_11.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_12.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_13.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_14.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_15.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_16.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_17.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_18.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_19.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_21.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_22.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_23.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_24.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_25.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_26.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_27.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_28.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_29.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_30.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_32.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029610_SCC_9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_10.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_11.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_12.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_13.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_14.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_15.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_16.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_17.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_18.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_19.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_21.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_22.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_23.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_24.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_25.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_26.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_27.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_28.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_29.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_30.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_32.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0029915_AK_9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0030410_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0030639_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0031670_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0031670_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0031670_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0031670_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0032345_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0032621_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0032689_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0032746_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033057_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033297_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033389_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033483_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033483_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033589_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033713_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033713_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033713_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0033713_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0034274_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0053647_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0053696_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054142_DF_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054151_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054151_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054151_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0054151_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0055645_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056422_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056422_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056422_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056422_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056614_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056614_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056614_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056614_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0056943_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057015_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057015_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057015_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057015_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057391_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0057871_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058332_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058332_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058332_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058332_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058608_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058608_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058608_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058608_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058635_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058792_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058792_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058792_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058792_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0058827_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059000_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059797_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059814_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059814_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059814_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059814_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0059916_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_10.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_11.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_12.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_13.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_14.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_15.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_16.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_17.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_18.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_19.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_21.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_22.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_23.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_24.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_25.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_26.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_27.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_28.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_29.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_30.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_32.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060131_SCC_9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060648_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060648_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060648_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0060648_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0061472_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0061864_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0061864_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062080_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062080_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062244_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062244_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062259_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062463_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062463_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062463_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062463_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062473_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0062473_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063135_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063135_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063135_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063135_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063157_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063157_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063157_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063157_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0063613_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064284_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064321_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064321_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064321_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064321_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0064687_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065432_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065432_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065629_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065636_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065922_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0065922_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066064_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066446_VASC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066446_VASC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066627_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066627_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066627_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0066627_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067006_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067006_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067006_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067006_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067088_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067088_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067259_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067418_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067418_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067418_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067418_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0067937_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0068619_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069197_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069197_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069197_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069197_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069377_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0069603_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070248_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070248_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070248_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070248_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070306_MNV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070342_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070342_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070342_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070342_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_10.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_11.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_12.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_13.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_14.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_15.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_16.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_17.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_18.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_19.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_20.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_21.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_22.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_23.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_24.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_25.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_26.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_27.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_28.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_29.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_30.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_31.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_32.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070507_AK_9.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070608_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070608_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070945_BCC.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0070945_BCC_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071580_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071580_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071580_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071580_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071768_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071768_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071768_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0071768_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_5.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_6.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_7.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072149_BKL_8.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072271_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072271_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072271_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072271_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072373_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072373_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072373_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072373_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072601_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072601_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072601_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0072601_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_0430904_NV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_2536728_NV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_3465766_NV.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_5829938_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_5829938_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_5829938_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_5829938_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_7680948_MEL.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_7680948_MEL_2.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_7680948_MEL_3.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\images\ISIC_7680948_MEL_4.jpg: 1 duplicate labels removed
+[34m[1mtrain: [39m[22mNew cache created: C:\Jinyoon Projects\datasets\combined_dataset_cascade\train\labels.cache
+[34m[1malbumentations: [39m[22mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+[34m[1malbumentations: [39m[22mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+[34m[1malbumentations: [39m[22mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+
+
+
+
+[34m[1mval: [39m[22mScanning C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\labels... 5334 images, 0 backgrounds, 0 corrupt:  90%|████████▉ | 5334/5950 [00:09<00:01, 603.70it/s]
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0014754_downsampled_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0026655_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0028461_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0033327_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0054073_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0055376_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0056967_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0057241_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0057640_BKL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0058232_BCC.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0061037_MNV.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0062935_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0066969_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0067821_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0068181_BKL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0069948_SCC.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0070853_BCC.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0071549_BCC.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_0072826_MEL.jpg: 1 duplicate labels removed
+[34m[1mval: [39m[22mWARNING ⚠️ C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\images\ISIC_2300635_NV.jpg: 1 duplicate labels removed
+
+[34m[1mval: [39m[22mScanning C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\labels... 5950 images, 0 backgrounds, 0 corrupt: 100%|██████████| 5950/5950 [00:10<00:00, 580.25it/s]
+[34m[1mval: [39m[22mNew cache created: C:\Jinyoon Projects\datasets\combined_dataset_cascade\valid\labels.cache
+Plotting labels to C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\runs\detect\train2-cascade-epoch502\labels.jpg...
+[34m[1moptimizer:[39m[22m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[39m[22m SGD(lr=0.01, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+50 epochs...
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+
+
+       1/50      1.04G      1.728      3.325      1.735         39        256:   1%|          | 26/4757 [00:05<16:57,  4.65it/s]
+Traceback (most recent call last):
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\_yolo_cascade\_yolo_custom_run.py", line 40, in <module>
+    main()
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\_yolo_cascade\_yolo_custom_run.py", line 31, in main
+    trainer.train()
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\engine\trainer.py", line 208, in train
+    self._do_train(world_size)
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\engine\trainer.py", line 379, in _do_train
+    self.loss, self.loss_items = self.model(batch)
+                                 ^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\tasks.py", line 79, in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\tasks.py", line 257, in loss
+    preds = self.forward(batch["img"]) if preds is None else preds
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\tasks.py", line 80, in forward
+    return self.predict(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\tasks.py", line 98, in predict
+    return self._predict_once(x, profile, visualize, embed)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\tasks.py", line 119, in _predict_once
+    x = m(x)  # run
+        ^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\modules\head.py", line 47, in forward
+    x[i] = torch.cat((self.cv2[i](x[i]), self.cv3[i](x[i])), 1)
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\container.py", line 215, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\ultralytics\nn\modules\conv.py", line 50, in forward
+    return self.act(self.bn(self.conv(x)))
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\batchnorm.py", line 174, in forward
+    self.running_mean
+  File "C:\Jinyoon Projects\0_Skin-Cancer-Detection-Capstone\venv\Lib\site-packages\torch\nn\modules\module.py", line 1682, in __getattr__
+    def __getattr__(self, name: str) -> Any:
+KeyboardInterrupt
