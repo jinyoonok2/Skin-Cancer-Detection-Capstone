@@ -18,7 +18,7 @@ The purpose of the research is to develop an all-in-one framework that integrate
 * A range of vision models, from the basic YOLOv8 model to vision transformers, are experimented with to compare performance.
 
 # Sample images
-![Description of Image1](images/Eigen-CAM.png)
-![Description of Image1](images/hair_mask.png)
-![Description of Image1](images/hair_file.png)
-![Description of Image1](images/dca_mask.png)
+![Eigen-CAM](images/Eigen-CAM.png)
+![hair_mask](images/hair_mask.png)
+![hair_file](images/hair_file.png)
+![dca_mask](images/dca_mask.png)
