@@ -8,7 +8,7 @@ with open(YAML_PATH, 'r') as file:
 
 # Function to update the class number in label files
 def update_label_files(class_name, class_index):
-    labels_path = os.path.join(DEFAULT_PATH, class_name, 'labels')
+    labels_path = os.path.join(DEFAULT_AFTER_PATH, class_name, 'labels')
     for label_file in os.listdir(labels_path):
         file_path = os.path.join(labels_path, label_file)
         with open(file_path, 'r') as file:

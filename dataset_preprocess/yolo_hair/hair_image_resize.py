@@ -1,6 +1,6 @@
 from PIL import Image
 import os
-from dataset_preprocess.yolo_hair.dataset_path import DEFAULT_PATH
+from dataset_preprocess.yolo_hair.dataset_path import HAIR_PATH
 
 
 def resize_images_inplace(source_dir, size=(512, 512)):
@@ -31,4 +31,4 @@ def resize_images_inplace(source_dir, size=(512, 512)):
 
 
 # Example usage
-resize_images_inplace(DEFAULT_PATH)
+resize_images_inplace(HAIR_PATH)

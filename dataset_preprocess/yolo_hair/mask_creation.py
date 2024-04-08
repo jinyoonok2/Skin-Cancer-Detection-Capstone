@@ -1,13 +1,13 @@
 import cv2
 import os
-from dataset_preprocess.yolo_hair.dataset_path import sample_dir, model_path
+from dataset_preprocess.yolo_hair.dataset_path import sample_dir, hair_model_path
 from dataset_preprocess.yolo_detect.dataset_path import TEST_PATH
 import numpy as np
 from ultralytics import YOLO
 import torch
 class YOLOHairMaskCreation:
     def __init__(self):
-        self.model = YOLO(model_path)  # Initialize YOLO with the provided model path
+        self.model = YOLO(hair_model_path)  # Initialize YOLO with the provided model path
 
     def hair_detected(self, image):
         results = self.model.predict(source=image, imgsz=512, device=0)
