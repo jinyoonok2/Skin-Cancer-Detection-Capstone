@@ -20,9 +20,18 @@ The purpose of the research is to develop an all-in-one framework that integrate
 # Phase 1: Image preprocessing
 ![hair_file](images/dca_mask.png)  
 sample of image data which its dark corners are masked and inpainted using the models & algorithms.  
+
+
+
 ![hair_mask](images/hair_mask.png)  
 sample of image data which its dark corners and hairs are masked and inpainted using the models & algorithms.  
+
+
+
 ![Eigen-CAM](images/Eigen-CAM.png)  
 Analyzed with interpretability framework to depict how the comprehension of the model had changed due to the proposed image preprocessing  
+
+
+
 
 # Phase 2: Model Modification (YOLOv8)
