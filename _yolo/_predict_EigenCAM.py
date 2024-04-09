@@ -67,6 +67,7 @@ def main():
         output_dir = CAM_comparison_output_dir[category]
         os.makedirs(output_dir, exist_ok=True)
 
+        print(before_dir, after_dir)
         for image_name in os.listdir(before_dir):
             before_image_path = os.path.join(before_dir, image_name)
             after_image_path = os.path.join(after_dir, image_name)
