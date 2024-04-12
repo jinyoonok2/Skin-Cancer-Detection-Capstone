@@ -18,6 +18,9 @@ The purpose of the research is to develop an all-in-one framework that integrate
 * A range of vision models, from the basic YOLOv8 model to vision transformers, are experimented with to compare performance.
 
 # Phase 1: Image preprocessing
+![model_image](images/model_structure_1.png)  
+How the pipelines are implemented is illustrated.
+
 ![hair_file](images/dca_mask.png)  
 sample of image data which its dark corners are masked and inpainted using the models & algorithms.  
 
